@@ -6,7 +6,6 @@ COPY ./app.py /app/app.py
 COPY ./requirements.txt /app/requirements.txt
 COPY ./templates /app/templates
 COPY ./static /app/static
-COPY ./uwsgi.ini /app/uwsgi.ini
 
 # Instala wkhtmltopdf y las dependencias de Python
 RUN apt-get update && apt-get install -y \
@@ -14,4 +13,4 @@ RUN apt-get update && apt-get install -y \
     && pip install --no-cache-dir -r /app/requirements.txt
 
 # Comando para iniciar la aplicación
-CMD ["uwsgi", "--ini", "/app/uwsgi.ini"]
+CMD ["gunicorn", "-w", "4", "-b", "0.0.0.0:8000", "app:app"]
