@@ -13,4 +13,4 @@ RUN apt-get update && apt-get install -y \
     && pip install --no-cache-dir -r /app/requirements.txt
 
 # Comando para iniciar la aplicación
-CMD ["gunicorn", "-w", "4", "-b", "0.0.0.0:8000", "app:app"]
+CMD ["gunicorn", "-c", "gunicorn_config.py", "app:app"]
