@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Voucher - {{ nombre }}</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+  <style>
+    body{
+      font-family: "Montserrat", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+    }
+    .flex {
+      width: 100%;
+      display: -webkit-box;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+    .info {
+      width: 65%;
+      font-size: 11px;
+      line-height: 1.1;
+    }
+    .logo {
+      width: 35%;
+    }
+    .logo img{
+      width: 250px;
+    }
+    .voucher {
+      color: #00ffff;
+      font-weight: bold;
+      font-size: 12px;
+    }
+    .titulo {
+      text-align: center;
+      color: #00ffff;
+      font-size: 13px;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+    .footnote {
+      font-size: 10px;
+      text-align: justify;
+      line-height: 1.1;
+    }
+    table {
+      width: 95%;
+      font-size: 11px;
+      line-height: 0.9;
+      text-align: justify;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+
+<body>
+  <div class='flex'>
+    <div class='info'>
+      <p class='voucher'>VOUCHER: {{ voucher }}</p>
+      <p>LAST AND FIRST NAME: {{ nombre }}<br />
+      ID/PASSPORT: {{ dni }} {{ pasaporte }}<br />
+      DATE OF BIRTH: {{ fecha_nacimiento }}<br />
+      PLAN: {{ plan }}<br />
+      DESTINATION: {{ destino }}<br />
+      VALIDITY: FROM {{ vigencia_del }} TO {{ vigencia_al }}<br />
+      DATE OF EMISSION: {{ fecha_emision }}<br />
+      EMERGENCY CONTACT: {{ contacto_emergencia }}<br />
+      TELEPHONE: {{ telefono }}<br />
+      AGENCY: {{ agencia }}</p>
+    </div>
+    <div class='logo'>
+      <img src='http://localhost:5000/static/logo.png' alt='Logo' />
+    </div>
+  </div>
+  <div class="titulo">conditions of service</div>
+  <div class="titulo">services and benefits (limiting countries validity) international scope</div>
+  <table>
+    <tbody>
+      <tr>
+        <td>
+          <p>- Medical assistance in case of illness (*)</p>
+        </td>
+        <td>
+          <p>Up to USD 40.000</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>- Medical assistance in case of accident (*)</p>
+        </td>
+        <td>
+          <p>Up to USD 40.000</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>- Medical assistance in case of preexisting illness</p>
+        </td>
+        <td>
+          <p>Up to USD 600</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>- Assistance in case of illness or accident in cruises (**)</p>
+        </td>
+        <td>Included</td>
+      </tr>
+      <tr>
+        <td>
+          <p>- Emergency dentistry</p>
+        </td>
+        <td>
+          <p>Up to USD 300</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>- Prescription drugs</p>
+        </td>
+        <td>
+          <p>Up to USD 300</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>- Medical assistance in case of Covid19 (**)</p>
+        </td>
+        <td>Included</td>
+      </tr>
+      <tr>
+        <td>
+          <p>- Cancellation coverage due to Covid19</p>
+        </td>
+        <td>
+          <p>Up to USD 500</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>- Expenses due to cancelation with a cause</p>
+        </td>
+        <td>
+          <p>Up to USD 500</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>- Expenses due to cancelation without a cause</p>
+        </td>
+        <td>
+          <p>Up to USD 200</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>- Travel agency protect</p>
+        </td>
+        <td>
+          <p>USD 50</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>- Additional days for hospitalizations</p>
+        </td>
+        <td>
+          <p>5 days</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>- Accompaniment for an underage person (**)</p>
+        </td>
+        <td>Included</td>
+      </tr>
+      <tr>
+        <td>
+          <p>- Hotel expenses due to convalescence</p>
+        </td>
+        <td>
+          <p>Up to USD 500</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>- Transfer of a relative in case of hospitalization (**)</p>
+        </td>
+        <td>Included</td>
+      </tr>
+      <tr>
+        <td>
+          <p>- Sanitary transfer (**)</p>
+        </td>
+        <td>Included</td>
+      </tr>
+      <tr>
+        <td>
+          <p>- Sanitary repatriation (**)</p>
+        </td>
+        <td>Included</td>
+      </tr>
+      <tr>
+        <td>
+          <p>- Funeral repatriation (**)</p>
+        </td>
+        <td>Included</td>
+      </tr>
+      <tr>
+        <td>
+          <p>- Early return due to the death of a relative (**)</p>
+        </td>
+        <td>Included</td>
+      </tr>
+      <tr>
+        <td>
+          <p>- Early return due to accident at the owner's home (**)</p>
+        </td>
+        <td>Included</td>
+      </tr>
+      <tr>
+        <td>
+          <p>- Complementary compensation for loss of luggage on commercial airline</p>
+        </td>
+        <td>
+          <p>Up to USD 1.000</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>- Localization and assistance for lost luggage search</p>
+        </td>
+        <td>Included</td>
+      </tr>
+      <tr>
+        <td>
+          <p>- Transfer of funds</p>
+        </td>
+        <td>
+          <p>Up to USD 800</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>- Transfer of funds for criminal bail</p>
+        </td>
+        <td>
+          <p>Up to USD 2.000</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>- Legal assistance for traffic accidents</p>
+        </td>
+        <td>
+          <p>Up to USD 800</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>- Assistance for lost documentation</p>
+        </td>
+        <td>Included</td>
+      </tr>
+      <tr>
+        <td>
+          <p>- Transmission of urgent messages</p>
+        </td>
+        <td>Included</td>
+      </tr>
+      <tr>
+        <td>
+          <p>- Concierge service 24/7</p>
+        </td>
+        <td>Included</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="titulo">services and benefits (national territory validity) national scope</div>
+  <table>
+    <tbody>
+      <tr>
+        <td>
+          <p>- Medical assistance in case of illness (*)</p>
+        </td>
+        <td>
+          <p>Up to ARS 40.000</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>- Medical assistance in case of accident (*)</p>
+        </td>
+        <td>
+          <p>Up to ARS 40.000</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>- Medical assistance in case of preexisting illness</p>
+        </td>
+        <td>
+          <p>Up to ARS 1.000</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>- Emergency dentistry</p>
+        </td>
+        <td>
+          <p>Up to ARS 1.500</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>- Prescription drugs</p>
+        </td>
+        <td>
+          <p>Up to ARS 1.500</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>- Sanitary transfer (**)</p>
+        </td>
+        <td>Included</td>
+      </tr>
+      <tr>
+        <td>
+          <p>- Funeral transfer (**)</p>
+        </td>
+        <td>Included</td>
+      </tr>
+      <tr>
+        <td>
+          <p>- Localization and assistance for lost luggage search</p>
+        </td>
+        <td>Included</td>
+      </tr>
+      <tr>
+        <td>
+          <p>- Legal assistance for traffic accidents</p>
+        </td>
+        <td>
+          <p>Up to ARS 2.500</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>- Transmission of urgent messages</p>
+        </td>
+        <td>Included</td>
+      </tr>
+      <tr>
+        <td>
+          <p>- Concierge service 24/7</p>
+        </td>
+        <td>Included</td>
+      </tr>
+    </tbody>
+  </table>
+  <p class='footnote'>Check general conditions of these services. PREMIUM line cancellation insurance included for passengers up to 74 years old.</p>
+  <div class="titulo">emergency numbers</div>
+  <p> </p>
+  <table>
+    <tbody>
+      <tr>
+        <td>- United States 1-844-350-6288</td>
+        <td>- Cuba +53-7-866-4121/8920</td>
+        <td>- Cuba +53-7-866-4499/5560</td>
+      </tr>
+      <tr>
+        <td>- Argentina +54-11-5353-2662</td>
+        <td>- Argentina 0800-999-1391</td>
+        <td>- Brazil 0800-761-4045</td>
+      </tr>
+      <tr>
+        <td>- Mexico 01-800-283-2916</td>
+        <td>- Spain 900-995-488</td>
+        <td>- Russia 8800-3017-417</td>
+      </tr>
+    </tbody>
+  </table>
+  <p class='footnote'><strong>From the rest of the world by reverse charge (requesting the local operator) or directly</strong> (+54 11) 5353-2662 <strong>Whatsapp</strong> (+54 9 11) 2260 - 8613 (do not use for emergency)<br />
+    It is common for hotels to prefer to bill you for the call, in this case pay it, request and keep a receipt, which we will reimburse for the cost of the call.<br />
+    (*) Attendance tops are not cumulative with each other. All established amounts are per passenger.<br />
+    (**) Up to the maximum amount established in this voucher for the items of illness or accident and according to Particular Conditions / Generals of Avril Assistance S.A.<br />
+    (***) Please see Particular Conditions of the Protect Plan.</p>
+  
+    <p class="footnote"><strong>Note</strong>: Carefully read the General Conditions, their exclusions, medical recommendations and their use on our website <a href='www.avril-assistance.com'>www.avril-assistance.com.</a>. To obtain more information, it is an essential requirement to call us in advance or within 24 hours of the event.</p>
+  
+    <div class='titulo'>
+      THIS VOUCHER IS PERSONAL AND NON-TRANSFERABLE<br />
+      WE WISH YOU A SAFE TRIP.
+    </div>
+</body>
+</html>

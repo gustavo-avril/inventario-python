@@ -1,0 +1,47 @@
+body{
+	font-family: "Montserrat", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+}
+.flex {
+	width: 100%;
+	display: -webkit-box;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+.info {
+	width: 65%;
+	font-size: 11px;
+	line-height: 1.1;
+}
+.logo {
+	width: 35%;
+}
+.logo img{
+	width: 250px;
+}
+.voucher {
+	color: #00ffff;
+	font-weight: bold;
+	font-size: 12px;
+}
+.titulo {
+	text-align: center;
+	color: #00ffff;
+	font-size: 13px;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+.footnote {
+	font-size: 10px;
+	text-align: justify;
+	line-height: 1.1;
+}
+table {
+	width: 95%;
+	font-size: 11px;
+	line-height: 0.9;
+	text-align: justify;
+	margin: 0 auto;
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Extractor de PDF</title>
+  <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.png') }}" type="image/x-icon">
+  <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+</head>
+
+<body>
+  <div class="wrapper">
+    <img src="{{ url_for('static', filename='logo.png') }}" alt="">
+
+    <form action="/upload" method="post" enctype="multipart/form-data">
+      <label for="file">Paso 1: Sube tu Archivo PDF</label>
+      <input type="file" name="pdf_file" accept=".pdf" required>
+      <br />
+      <label for="template">Paso 2: Escoge el plan.</label>
+      <select name="template" id="template" required>
+        <option value="inf15">Infinity 15 Plus</option>
+        <option value="inf25">Infinity 25 Plus</option>
+        <option value="inf40">Infinity 40 Plus</option>
+        <option value="inf60">Infinity 60 Plus</option>
+        <option value="inf80">Infinity 80 Plus</option>
+        <option value="inf100">Infinity 100 Plus</option>
+        <option value="inf30EUpro">Infinity 30 Europe Plus</option>
+        <option value="inf25pro">Infinity 25 Protect</option>
+        <option value="inf40pro">Infinity 40 Protect</option>
+        <option value="inf60pro">Infinity 60 Protect</option>
+        <option value="inf80pro">Infinity 80 Protect</option>
+        <option value="inf40EUpro">Infinity 40 Europe</option>
+        <!-- <option value="inf40EUpro">Infinity 40 Europe Protect*</option> -->
+        <option value="reg25pro">Regional 25 Protect</option>
+        <option value="reg40pro">Regional 40 Protect</option>
+        <option value="pre60pro">Premium 60 Protect</option>
+        <option value="pre80pro">Premium 80 Protect</option>
+        <option value="pre100pro">Premium 100 Protect</option>
+        <option value="pre150pro">Premium 150 Protect</option>
+        <option value="pre250pro">Premium 250 Protect</option>
+        <!--<option value="pre50proEU">Premium Europe 50 Protect**</option>
+          <option value="reg25">Infinity Regional 25**</option>
+          <option value="reg40">Infinity Regional 40**</option> -->
+      </select>
+      <br>
+      <label for="language">Paso 3: Selecciona un idioma:</label>
+      <select name="language" id="language" required>
+        <option value="en">Inglés</option>
+        <option value="br">Portugués</option>
+      </select>
+      <br />
+      <button class="procesar" type="submit">Procesar</button>
+    </form>
+  </div>
+</body>
+
+</html>
